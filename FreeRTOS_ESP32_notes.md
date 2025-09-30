@@ -1,4 +1,6 @@
 # FreeRTOS for beginners  by Arjun
+---
+
 ## 📌 What is FreeRTOS?
 
 **FreeRTOS** is an open-source **real-time operating system (RTOS)** designed specifically for **embedded systems**. It allows microcontrollers to run **multiple tasks seemingly in parallel**, providing a lightweight and efficient way to build more complex applications.
@@ -105,7 +107,7 @@
   * Data logging
 
 ---
-===========================================================================================================================
+============================================================================================
 # FreeRTOS ESP32 basic code structure and explanation:
 
 ```cpp
@@ -349,7 +351,7 @@ void loop(){
 | LED3 | 17   | `loop()`   | 1111ms on / 1111ms off |
 
 ---
-===========================================================================================================================
+============================================================================================
 # Question: Will this taks run on same or different cores, also if freeRTOS is not used then the common loop will run in which core?
 
 Great question! Let's talk about **ESP32 cores**, **FreeRTOS task scheduling**, and what happens when **FreeRTOS is not explicitly used**.
@@ -442,7 +444,7 @@ Behind the scenes:
 | Arduino without manual FreeRTOS | ✅ Yes (behind scenes) | Core 1                      |
 
 ---
-===========================================================================================================================
+============================================================================================
 # **ticks**, **vTaskDelay()**, and **delay()** in FreeRTOS and ESP32.
 
 ---
@@ -517,7 +519,7 @@ vTaskDelay(500 / portTICK_PERIOD_MS);  // Always results in 500 ms delay
 > A **tick** is FreeRTOS's way of counting time (usually 1 ms on ESP32), and `vTaskDelay()` uses **ticks** to pause tasks, making it better for multitasking than the regular `delay()`.
 
 ---
-===========================================================================================================================
+============================================================================================
 # Determine the memory requirement of a FreeRTOS task
 
 1. **Why we care about task memory (stack) in FreeRTOS**
@@ -704,7 +706,7 @@ BlinkTask
 * Waste due to over-allocation
 
 ---
-===========================================================================================================================
+============================================================================================
 # Suspending and Resuming Tasks in FreeRTOS
 
 ![alt text](image.png)
@@ -897,7 +899,3 @@ vTaskResume(selfTaskHandle);
 * Always use **task handles** properly — never lose track of them!
 
 ---
-
-==
-
-

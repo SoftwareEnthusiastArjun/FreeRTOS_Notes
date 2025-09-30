@@ -443,7 +443,7 @@ Behind the scenes:
 
 ---
 ===========================================================================================================================
-Absolutely! Let's simplify everything you just said into **plain, easy-to-understand terms**, especially focusing on **ticks**, **vTaskDelay()**, and **delay()** in FreeRTOS and ESP32.
+# **ticks**, **vTaskDelay()**, and **delay()** in FreeRTOS and ESP32.
 
 ---
 
